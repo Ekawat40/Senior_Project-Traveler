@@ -8,7 +8,7 @@
 
     public class SwapBg : MonoBehaviour
     {
-        Scene sceneM;
+
         public SpriteRenderer part;
         public Sprite[] options;
         public int index;
@@ -19,7 +19,7 @@
 
         private void Start()
         {
-            sceneM = SceneManager.GetActiveScene();
+
             // Create a new pedometer
             pedometer = new Pedometer(OnStep);
             // Reset UI
