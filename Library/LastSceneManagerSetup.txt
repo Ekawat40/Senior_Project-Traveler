@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/cityDecorate.unity
+=======
+- path: Assets/Scenes/LogoStart.unity
+>>>>>>> df3f07fe399643d381e02793741e71408ae45b88
   isLoaded: 1
   isActive: 1
