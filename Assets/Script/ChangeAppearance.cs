@@ -70,6 +70,30 @@ public class ChangeAppearance : MonoBehaviour {
         }
     }
 
+    public void changeClothing1()
+    {
+        if (index < options.Length - 1)
+        {
+            index =1;
+        }
+        else
+        {
+            index = 0;
+        }
+    }
+
+    public void changeClothing2()
+    {
+        if (index < options.Length - 1)
+        {
+            index = 2;
+        }
+        else
+        {
+            index = 0;
+        }
+    }
+
 
     public void ChangeSkinColor(int skinId)
     {
@@ -85,7 +109,7 @@ public class ChangeAppearance : MonoBehaviour {
         refPush.Child("Gender").SetValueAsync(gender);
         //  refPush.Child("ClothId").SetValueAsync(index);
 
-
+        
     }
 
 }

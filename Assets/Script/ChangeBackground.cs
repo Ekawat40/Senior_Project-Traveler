@@ -11,7 +11,7 @@ namespace PedometerU.Tests
 
     public class ChangeBackground : MonoBehaviour
     {
-        Scene sceneM;
+
         public SpriteRenderer part;
         public Sprite[] options;
         public int index;
@@ -25,7 +25,7 @@ namespace PedometerU.Tests
 
         private void Start()
         {
-            sceneM = SceneManager.GetActiveScene();
+
             // Create a new pedometer
             pedometer = new Pedometer(OnStep);
             // Reset UI
