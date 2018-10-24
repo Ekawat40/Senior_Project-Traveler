@@ -250,6 +250,9 @@
     <Reference Include="Managed/Unity.Locator">
       <HintPath>C:\Program Files\Unity\Editor\Data\Managed/Unity.Locator.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -674,16 +677,14 @@
     <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometerAndroid.cs" />
     <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometerBridge.cs" />
     <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometeriOS.cs" />
+    <Compile Include="Assets\Script\aor.cs" />
     <Compile Include="Assets\Script\ChangeAppearance.cs" />
     <Compile Include="Assets\Script\ChangeBackground.cs" />
     <Compile Include="Assets\Script\ChangeBg.cs" />
     <Compile Include="Assets\Script\DragHandeler.cs" />
-    <Compile Include="Assets\Script\LevelUnlockScripts\CupScript.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\LevelControlScript.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\LevelNumberScript.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
-    <Compile Include="Assets\Script\LevelUnlockScripts\PlayerMoveScript.cs" />
-    <Compile Include="Assets\Script\LevelUnlockScripts\SkullScript.cs" />
     <Compile Include="Assets\Script\SceneControl.cs" />
     <Compile Include="Assets\Script\Slot.cs" />
     <Compile Include="Assets\Script\SwapBg.cs" />
