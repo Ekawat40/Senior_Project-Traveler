@@ -1,4 +1,20 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/levelUn/MainMenu.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/SampleScene.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/levelUn/level1.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/cityDecorate.unity
+=======
+- path: Assets/Scenes/LogoStart.unity
+>>>>>>> df3f07fe399643d381e02793741e71408ae45b88
+>>>>>>> 7fc878e66d6b6dfbb5f51c06def583deda75f9dd
+>>>>>>> 4bd2bad73279da41b8129d0bd2d006e541f53812
+>>>>>>> 18c14d493b6fdb151260aba90543bbf390ed8b5a
   isLoaded: 1
   isActive: 1
