@@ -33,7 +33,7 @@
             // Display the values // Distance in feet
             num = steps;
             numBg = steps;
-            testText.text = numBg.ToString();
+            //testText.text = numBg.ToString();
             stepText.text = num.ToString();
             //stepText.text = steps.ToString();
             //distanceText.text = (distance * 3.28084).ToString("F2") + " ft";
