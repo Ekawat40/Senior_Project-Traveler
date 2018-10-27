@@ -11,6 +11,9 @@ public class MainManuControlScript : MonoBehaviour {
 
     int money = 0;
 
+    [SerializeField]
+    GameObject btnDes;
+
 	// Use this for initialization
 	void Start () {
 		levelPassed = PlayerPrefs.GetInt ("LevelPassed");
@@ -47,10 +50,12 @@ public class MainManuControlScript : MonoBehaviour {
         { // ถ้า levelPassed = 1 จะปลดล็อคlevleของด่านที่2  , ถ้า levelPassed = 2 จะปลดล็อคlevleของด่านที่ 2 กับ 3
             case 5:
                 level02Button.interactable = true;
+                money = money - 5;
                 break;
             case 10:
                 level02Button.interactable = true;
                 level03Button.interactable = true;
+                money = money - 10;
                 break;
         }
     }
@@ -72,5 +77,10 @@ public class MainManuControlScript : MonoBehaviour {
     {
         money = money+1;
 
+    }
+
+    public void btnDestroy()
+    {
+        Destroy(btnDes);
     }
 }

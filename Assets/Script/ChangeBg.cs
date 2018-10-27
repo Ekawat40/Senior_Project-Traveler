@@ -9,7 +9,7 @@ namespace PedometerU.Tests
     using UnityEngine.UI;
     using UnityEngine.SceneManagement;
 
-    public class ChangeBg : MonoBehaviour
+    public class ChangeBg : MonoBehaviour 
     {
        // Scene sceneM;
         public SpriteRenderer part;
@@ -22,7 +22,7 @@ namespace PedometerU.Tests
         private Pedometer pedometer;
         private int stepP;
 
-
+        
         private void Start()
         {
             //sceneM = SceneManager.GetActiveScene();

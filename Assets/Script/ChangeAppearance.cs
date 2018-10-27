@@ -107,9 +107,10 @@ public class ChangeAppearance : MonoBehaviour {
         //refPush.Child("Username").SetValueAsync(""+username.text);
         refPush.Child("Skincolor").SetValueAsync(whatColor);
         refPush.Child("Gender").SetValueAsync(gender);
+        //refPush.Child("userName").SetValueAsync("Aek");
         //  refPush.Child("ClothId").SetValueAsync(index);
 
-        
+
     }
 
 }

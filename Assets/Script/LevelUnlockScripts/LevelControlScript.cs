@@ -44,7 +44,7 @@ public class LevelControlScript : MonoBehaviour {
 
 	void loadNextLevel() //ปลดล็อคlevel แก้เป็นปลดล็อคไอเทม/เมือง ต่างๆเมื่อจ่ายตังค์
 	{
-		SceneManager.LoadScene (sceneIndex + 1);
+		//SceneManager.LoadScene (sceneIndex + 1);
 	}
 
 	void loadMainMenu()
