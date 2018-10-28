@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelControlScript : MonoBehaviour {
 
 	public static LevelControlScript instance = null;
-	GameObject levelSign, gameOverText, youWinText;
+	GameObject levelSign, gameOverText;
 	int sceneIndex, levelPassed;
 
 	// Use this for initialization
@@ -19,10 +19,10 @@ public class LevelControlScript : MonoBehaviour {
 			Destroy (gameObject);
 
 		levelSign = GameObject.Find ("LevelNumber");
-		gameOverText = GameObject.Find ("GameOverText");
-		youWinText = GameObject.Find ("YouWinText");
+		//gameOverText = GameObject.Find ("GameOverText");
+		//youWinText = GameObject.Find ("YouWinText");
 		gameOverText.gameObject.SetActive (false);
-		youWinText.gameObject.SetActive (false);
+
 
 		sceneIndex = SceneManager.GetActiveScene ().buildIndex;
 		levelPassed = PlayerPrefs.GetInt ("LevelPassed");
@@ -36,25 +36,19 @@ public class LevelControlScript : MonoBehaviour {
 			if (levelPassed < sceneIndex)
 				PlayerPrefs.SetInt ("LevelPassed", sceneIndex);
 			levelSign.gameObject.SetActive (false);
-			youWinText.gameObject.SetActive (true);
+
 			Invoke ("loadNextLevel", 1f);
 		}
 	}
 
-	public void youLose()
-	{
-		levelSign.gameObject.SetActive (false);
-		gameOverText.gameObject.SetActive (true);
-		Invoke ("loadMainMenu", 1f);
-	}
 
-	void loadNextLevel()
+	void loadNextLevel() //ปลดล็อคlevel แก้เป็นปลดล็อคไอเทม/เมือง ต่างๆเมื่อจ่ายตังค์
 	{
-		SceneManager.LoadScene (sceneIndex + 1);
+		//SceneManager.LoadScene (sceneIndex + 1);
 	}
 
 	void loadMainMenu()
 	{
-		SceneManager.LoadScene ("MainMenu");
+		SceneManager.LoadScene ("MainMenu"); //เปลี่ยนscene
 	}
 }

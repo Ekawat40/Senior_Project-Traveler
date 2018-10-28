@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/DecorateCity.unity
+=======
+- path: Assets/Scenes/levelUn/MainMenu.unity
+>>>>>>> 4ccb70bd42658f9f7a3c05bda1b2b55229a1c7fe
   isLoaded: 1
   isActive: 1
