@@ -4,11 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour {
-    
+
+    public GameObject Panel;
 
     // Use this for initialization
-    void Start () {
-        
+    void Start()
+    {
+        Panel.SetActive(false);
+    }
+    public void changePanelState(bool state)
+    {
+        Panel.SetActive(state);
     }
 	
 	// Update is called once per frame

@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/ChooseGender.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/CreateBoyCharacter.unity
+=======
+- path: Assets/Scenes/DecorateCity2.unity
+>>>>>>> 67efa1c603ed3a03428843472a51c7030661e5c0
+>>>>>>> 164283b95c9d9ff0037785f5905285c8735cfa6e
   isLoaded: 1
   isActive: 1
