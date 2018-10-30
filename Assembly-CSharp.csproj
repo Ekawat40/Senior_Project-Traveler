@@ -75,6 +75,7 @@
     <Compile Include="Assets\Script\LevelUnlockScripts\LevelControlScript.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\LevelNumberScript.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
+    <Compile Include="Assets\Script\MoveBackgroud.cs" />
     <Compile Include="Assets\Script\saveLocation.cs" />
     <Compile Include="Assets\Script\SceneControl.cs" />
     <Compile Include="Assets\Script\Slot.cs" />
