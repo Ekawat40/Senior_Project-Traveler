@@ -15,6 +15,7 @@
         public Text stepText, distanceText,testText;
         private Pedometer pedometer;
         private int num, numBg;
+        int state = 0;
 
 
         private void Start()
@@ -48,13 +49,13 @@
 
         void Update()
         {
-            for (int i = 0; i < options.Length; i++)
+           /* for (int i = 0; i < options.Length; i++)
             {
                 if (i == index)
                 {
                     part.sprite = options[i];
                 }
-            }
+            }*/
 
             Cbg();
         }
@@ -86,14 +87,63 @@
 
             // ถ้านับก้าวครบทุกๆ15ก้าวจะเปลี่ยนประเทศ 
 
-            if (numBg == 40)
+           /* if (numBg >= 40)
             {
                 index++;
             }
-            else if(numBg ==80)
+            else if(numBg >=80)
             {
                 index = 0;
+            }*/
+
+
+            // ถ้าครบ10เปลี่ยนBg ถ้าครบ20เปลี่ยนBG ถ้าครบ30เปลี่ยนBg  / Bgแรกจะstate=1 โดยจะเพิ่มตามลำดับแต่ละstate เมื่อครบรอบstate = 1เพื่อกลับไปวนลูปใหม่
+
+
+            if(state == 0)
+            {
+
+                if (numBg >= 20)
+                {
+                    index++;
+                    state = 1;
+                    part.sprite = options[index];
+                }
+            }else if(state == 1)
+            {
+                if (numBg >= 40)
+                {
+                    index++;
+                    state = 2;
+                    part.sprite = options[index];
+                }
+            }else if(state == 2)
+            {
+                if (numBg >= 60)
+                {
+                    index++;
+                    state = 3;
+                    part.sprite = options[index];
+                }
+            }else if(state == 3)
+            {
+                if (numBg >= 80)
+                {
+                    index++;
+                    state = 4;
+                    part.sprite = options[index];
+                }
+            }else if(state == 4)
+            {
+                if (numBg >= 100)
+                {
+                    index=0;
+                    state = 0;
+                    part.sprite = options[index];
+                }
             }
+
+
         }
 
         public void Addnum()

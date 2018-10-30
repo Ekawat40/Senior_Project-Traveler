@@ -95,7 +95,7 @@ namespace PedometerU.Tests
 
         public void Addnum()
         {
-            stepP++;
+            //step++;
         }
 
 
