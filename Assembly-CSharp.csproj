@@ -77,7 +77,11 @@
     <Compile Include="Assets\Script\LevelUnlockScripts\LevelNumberScript.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
 <<<<<<< HEAD
+    <Compile Include="Assets\Script\MoveBackgroud.cs" />
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> c9b46e1d310cef001d18ee69fde60bf4ac4107e5
     <Compile Include="Assets\Script\saveLocation.cs" />
 >>>>>>> 67efa1c603ed3a03428843472a51c7030661e5c0
     <Compile Include="Assets\Script\SceneControl.cs" />

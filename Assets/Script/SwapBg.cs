@@ -154,7 +154,7 @@
 
         public void btnCity()
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("DecorateCity2");
         }
 
         public void btnShop()
