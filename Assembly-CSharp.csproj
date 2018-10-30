@@ -60,15 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Pedometer\Example\StepCounter.cs" />
-    <Compile Include="Assets\Pedometer\Plugins\Managed\IPedometer.cs" />
-    <Compile Include="Assets\Pedometer\Plugins\Managed\Pedometer.cs" />
-    <Compile Include="Assets\Pedometer\Plugins\Managed\PedometerTypes.cs" />
-    <Compile Include="Assets\Pedometer\Plugins\Managed\PedometerUtility.cs" />
-    <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometerAndroid.cs" />
-    <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometerBridge.cs" />
-    <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometeriOS.cs" />
-    <Compile Include="Assets\Script\aor.cs" />
+    <Compile Include="Assets\Scenes\Pedometer\Example\StepCounter.cs" />
+    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\IPedometer.cs" />
+    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\Pedometer.cs" />
+    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\PedometerTypes.cs" />
+    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\PedometerUtility.cs" />
+    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\Platforms\PedometerAndroid.cs" />
+    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\Platforms\PedometerBridge.cs" />
+    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\Platforms\PedometeriOS.cs" />
     <Compile Include="Assets\Script\ChangeAppearance.cs" />
     <Compile Include="Assets\Script\ChangeBackground.cs" />
     <Compile Include="Assets\Script\ChangeBg.cs" />
@@ -77,6 +76,10 @@
     <Compile Include="Assets\Script\LevelUnlockScripts\LevelControlScript.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\LevelNumberScript.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Script\saveLocation.cs" />
+>>>>>>> 67efa1c603ed3a03428843472a51c7030661e5c0
     <Compile Include="Assets\Script\SceneControl.cs" />
     <Compile Include="Assets\Script\Slot.cs" />
     <Compile Include="Assets\Script\SwapBg.cs" />

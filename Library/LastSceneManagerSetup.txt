@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/CreateBoyCharacter.unity
+=======
+- path: Assets/Scenes/DecorateCity2.unity
+>>>>>>> 67efa1c603ed3a03428843472a51c7030661e5c0
   isLoaded: 1
   isActive: 1
