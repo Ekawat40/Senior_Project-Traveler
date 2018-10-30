@@ -669,14 +669,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Pedometer\Example\StepCounter.cs" />
-    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\IPedometer.cs" />
-    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\Pedometer.cs" />
-    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\PedometerTypes.cs" />
-    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\PedometerUtility.cs" />
-    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\Platforms\PedometerAndroid.cs" />
-    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\Platforms\PedometerBridge.cs" />
-    <Compile Include="Assets\Scenes\Pedometer\Plugins\Managed\Platforms\PedometeriOS.cs" />
+    <Compile Include="Assets\BtnDestroy.cs" />
+    <Compile Include="Assets\Pedometer\Example\StepCounter.cs" />
+    <Compile Include="Assets\Pedometer\Plugins\Managed\IPedometer.cs" />
+    <Compile Include="Assets\Pedometer\Plugins\Managed\Pedometer.cs" />
+    <Compile Include="Assets\Pedometer\Plugins\Managed\PedometerTypes.cs" />
+    <Compile Include="Assets\Pedometer\Plugins\Managed\PedometerUtility.cs" />
+    <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometerAndroid.cs" />
+    <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometerBridge.cs" />
+    <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometeriOS.cs" />
     <Compile Include="Assets\Script\aor.cs" />
     <Compile Include="Assets\Script\ChangeAppearance.cs" />
     <Compile Include="Assets\Script\ChangeBackground.cs" />
@@ -688,10 +689,6 @@
     <Compile Include="Assets\Script\SceneControl.cs" />
     <Compile Include="Assets\Script\Slot.cs" />
     <Compile Include="Assets\Script\SwapBg.cs" />
-    <Compile Include="Assets\ShopTutorialAssets\CoinScript.cs" />
-    <Compile Include="Assets\ShopTutorialAssets\GameControlScript.cs" />
-    <Compile Include="Assets\ShopTutorialAssets\MoveGirlScript.cs" />
-    <Compile Include="Assets\ShopTutorialAssets\ShopControlScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Firebase\Editor\AnalyticsDependencies.xml" />
@@ -710,6 +707,22 @@
     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.92.0.txt" />
     <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-analytics-unity-5.4.0\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-analytics-unity-5.4.0\R.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-analytics-unity-5.4.0\proguard.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-app-unity-5.4.0\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-app-unity-5.4.0\R.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-app-unity-5.4.0\proguard.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-auth-unity-5.4.0\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-auth-unity-5.4.0\R.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-auth-unity-5.4.0\proguard.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-common-16.0.3\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-common-16.0.3\R.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-common-16.0.3\proguard.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-common-16.0.3\third_party_licenses.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-database-unity-5.4.0\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-database-unity-5.4.0\R.txt" />
+    <None Include="Assets\Plugins\Android\com.google.firebase.firebase-database-unity-5.4.0\proguard.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />

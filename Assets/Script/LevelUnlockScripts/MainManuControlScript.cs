@@ -7,12 +7,11 @@ using UnityEngine.SceneManagement;
 public class MainManuControlScript : MonoBehaviour {
 
 	public Button level02Button, level03Button;
-	int levelPassed;
+	int levelPassed = 0;
 
     int money = 0;
 
-    [SerializeField]
-    GameObject btnDes;
+
 
 	// Use this for initialization
 	void Start () {
@@ -79,8 +78,5 @@ public class MainManuControlScript : MonoBehaviour {
 
     }
 
-    public void btnDestroy()
-    {
-        Destroy(btnDes);
-    }
+
 }

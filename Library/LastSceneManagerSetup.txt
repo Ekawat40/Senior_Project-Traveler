@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/levelUn/MainMenu.unity
+- path: Assets/Scenes/ChooseGender.unity
   isLoaded: 1
   isActive: 1
