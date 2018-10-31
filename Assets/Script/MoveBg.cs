@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveBg : MonoBehaviour {
 
+<<<<<<< HEAD
     public float bgSpeed;
     float bgPositionX = 0;
     float bg1PositionX = 0;
@@ -28,4 +29,15 @@ public class MoveBg : MonoBehaviour {
         }
 
     }
+=======
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+>>>>>>> 142e39fbeddafdc36862824a8007d04cba8b4981
 }
