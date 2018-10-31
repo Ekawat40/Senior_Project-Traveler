@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using PedometerU.Tests;
 
-public class CountryMap : MonoBehaviour {
+public class CountryMap : SwapBg
+{
 
-    public Button level02Button, level03Button;
+   // public Button level02Button, level03Button;
 
-
-    int money = 0;
-
-
+    [SerializeField]
+    GameObject btnDes1, btnDes2, btnDes3, btnDes4, btnDes5, btnDes6, btnDes7, btnDes8, btnDes9, btnDes10;
 
     // Use this for initialization
     void Start()
     {
-        int levelPassed;
+        /*int levelPassed;
         levelPassed = PlayerPrefs.GetInt("LevelPassed");
         level02Button.interactable = false;
-        level03Button.interactable = false;
+        level03Button.interactable = false;*/
 
         /*switch (levelPassed)        { // ถ้า levelPassed = 1 จะปลดล็อคlevleของด่านที่2  , ถ้า levelPassed = 2 จะปลดล็อคlevleของด่านที่ 2 กับ 3
             case 1:
@@ -31,7 +31,7 @@ public class CountryMap : MonoBehaviour {
 			break;
 		}*/
 
-        switch (money)
+        /*switch (money)
         { // ถ้า levelPassed = 1 จะปลดล็อคlevleของด่านที่2  , ถ้า levelPassed = 2 จะปลดล็อคlevleของด่านที่ 2 กับ 3
             case 5:
                 level02Button.interactable = true;
@@ -40,14 +40,25 @@ public class CountryMap : MonoBehaviour {
                 level02Button.interactable = true;
                 level03Button.interactable = true;
                 break;
+        }*/
+        setState();
+        Debug.Log(temp);
+        if (temp == 1)
+        {
+            Destroy(btnDes1);
         }
 
+        if (temp == 2)
+        {
+            Destroy(btnDes1);
+            Destroy(btnDes2);
+        }
     }
 
 
     private void Update()
     {
-        switch (money)
+        /*switch (money)
         { // ถ้า levelPassed = 1 จะปลดล็อคlevleของด่านที่2  , ถ้า levelPassed = 2 จะปลดล็อคlevleของด่านที่ 2 กับ 3
             case 5:
                 level02Button.interactable = true;
@@ -58,7 +69,13 @@ public class CountryMap : MonoBehaviour {
                 level03Button.interactable = true;
                 money = money - 10;
                 break;
-        }
+        }*/
+
+       // SwapBg swapBg = new SwapBg();
+
+        
+
+
     }
 
     /*public void levelToLoad (int level)
@@ -74,11 +91,6 @@ public class CountryMap : MonoBehaviour {
 	}*/
 
 
-    public void addMoney()
-    {
-        money = money + 1;
-
-    }
 
 
 }

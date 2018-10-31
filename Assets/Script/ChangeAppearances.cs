@@ -6,6 +6,7 @@ using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
 using UnityEngine.SceneManagement;
+using System;
 
 public class ChangeAppearances : MonoBehaviour {
     Scene sceneM;
@@ -20,17 +21,32 @@ public class ChangeAppearances : MonoBehaviour {
     public SpriteRenderer cloth;
     public SpriteRenderer hair;
     private DatabaseReference reference;
+    public Button SigninButton;
+
+    //
+    public InputField email_input;
+    public String RootName;
+    public Text showEmail;
+    String saveEmail;
+
+
 
     // Use this for initialization
     void Start () {
         sceneM = SceneManager.GetActiveScene();
         if (sceneM.name == "CreateGirlCharacter")
         {
+            Load();
             gender = 0;
         }
         else if (sceneM.name == "CreateBoyCharacter")
         {
+            Load();
             gender = 1;
+        }
+        else if(sceneM.name == "Login")
+        {
+            SigninButton.onClick.AddListener(() => LoginAction());
         }
         // ใช้สำหรับอ้างอิง Firebase Project
         //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveller-c316a.firebaseio.com/"); ของตัวที่ใช้ร่วมกัน
@@ -39,8 +55,13 @@ public class ChangeAppearances : MonoBehaviour {
         reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
-	// Update is called once per frame
-	void Update () {
+    public void LoginAction()
+    {
+        Save();
+    }
+
+    // Update is called once per frame
+    void Update () {
         for (int i = 0; i < colors.Length; i++)
         {
             if (i == whatColor)
@@ -66,14 +87,15 @@ public class ChangeAppearances : MonoBehaviour {
 
     public void CreateCharacter()
     {
-        SceneManager.LoadScene("Main_1");
-        var refPush = reference.Child("User").Push();
+        //var refPush = reference.Child("User"+ RootName).Push();
         //refPush.Child("Username").SetValueAsync(""+username.text);
-        refPush.Child("Skincolor").SetValueAsync(whatColor);
-        refPush.Child("Gender").SetValueAsync(gender);
-        refPush.Child("ClothId").SetValueAsync(clothId);
-        refPush.Child("HairId").SetValueAsync(hairId);
+        reference.Child("User/" + RootName).Child("Skincolor").SetValueAsync(whatColor);
+        reference.Child("User/" + RootName).Child("Skincolor").SetValueAsync(whatColor);
+        reference.Child("User/" + RootName).Child("Gender").SetValueAsync(gender);
+        reference.Child("User/" + RootName).Child("ClothId").SetValueAsync(clothId);
+        reference.Child("User/" + RootName).Child("HairId").SetValueAsync(hairId);
 
+        SceneManager.LoadScene("mockupmaincharacter");
     }
 
     public void ChangeSkinColor(int skinId)
@@ -88,4 +110,80 @@ public class ChangeAppearances : MonoBehaviour {
     {
         hairId = hId;
     }
+
+    public void btn()
+    {
+        Save();
+
+        SceneManager.LoadScene("CreateGirlCharacter");
+
+    }
+
+    public void btnGender()
+    {
+        Save();
+        //SceneManager.LoadScene("ChooseGender");
+    }
+
+
+    public void splitWord()
+    {
+        string[] separatingChars = { "@" };
+
+        string text1 = email_input.text;
+        //string text1 = "aekwatt@gmail.com";
+        System.Console.WriteLine("Original text: '{0}'", text1);
+
+        string[] words = text1.Split(separatingChars, System.StringSplitOptions.RemoveEmptyEntries);
+        System.Console.WriteLine("{0} substrings in text:", words.Length);
+
+        Debug.Log(words[0]);
+
+        RootName = words[0];
+        //tvRoot.text = RootName;
+
+
+    }
+
+    public void Save()
+    {
+        splitWord();
+        PlayerPrefs.SetString("RootKey", RootName);
+
+
+    }
+
+    public void Load()
+    {
+        if (PlayerPrefs.HasKey("RootKEy"))
+        {
+            //do something
+        }
+        //email_input.text = healthValue.ToString();
+        RootName = PlayerPrefs.GetString("RootKey", "");
+        if (PlayerPrefs.HasKey("RootKEy"))
+        {
+            //do something
+        }
+        showEmail.text = RootName;
+        Debug.Log(RootName);
+    }
+
+    public void btnCreate()
+    {
+        SceneManager.LoadScene("CreateGirlCharacter");
+    }
+
+
+    public void setName()
+    {
+        //healthValue = PlayerPrefs.GetInt("HealthKey", 0);
+        //PlayerPrefs.SetInt("HealthKey", 0);
+        if (PlayerPrefs.HasKey("HealthKEy"))
+        {
+            //do something
+        }
+        RootName = PlayerPrefs.GetString("RootKey", "");
+    }
+
 }

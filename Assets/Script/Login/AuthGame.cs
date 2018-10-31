@@ -12,6 +12,10 @@ public class AuthGame : MonoBehaviour
     public InputField email_input, password_input;
     public Button SignupButton, SigninButton;
     public Text ErrorText;
+
+
+
+
     // Use this for initialization
     public void Start()
     {
@@ -68,7 +72,7 @@ public class AuthGame : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        AsyncOperation async = SceneManager.LoadSceneAsync("LogoStart");
+        AsyncOperation async = SceneManager.LoadSceneAsync("ChooseGender");
         while (!async.isDone)
         {
             yield return null;

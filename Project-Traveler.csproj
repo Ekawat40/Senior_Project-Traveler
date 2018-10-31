@@ -681,24 +681,26 @@
     <Compile Include="Assets\Pedometer\Plugins\Managed\Platforms\PedometeriOS.cs" />
     <Compile Include="Assets\Script\BtnDestroy.cs" />
     <Compile Include="Assets\Script\ChangeAppearance.cs" />
+    <Compile Include="Assets\Script\ChangeAppearances.cs" />
     <Compile Include="Assets\Script\ChangeBackground.cs" />
     <Compile Include="Assets\Script\ChangeBg.cs" />
-    <Compile Include="Assets\Script\CreateCharacter\ChangeAppearances.cs" />
     <Compile Include="Assets\Script\DragHandeler.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\CountryMap.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
     <Compile Include="Assets\Script\LoadSceneControl.cs" />
     <Compile Include="Assets\Script\Login\AuthGame.cs" />
     <Compile Include="Assets\Script\Login\main.cs" />
+    <Compile Include="Assets\Script\mainControl.cs" />
     <Compile Include="Assets\Script\MoveBackgroud.cs" />
     <Compile Include="Assets\Script\MoveBg.cs" />
-    <Compile Include="Assets\Script\NewBehaviourScript.cs" />
     <Compile Include="Assets\Script\SaveDataSc.cs" />
     <Compile Include="Assets\Script\saveLocation.cs" />
     <Compile Include="Assets\Script\SceneControl.cs" />
+    <Compile Include="Assets\Script\SceneController.cs" />
     <Compile Include="Assets\Script\Slot.cs" />
     <Compile Include="Assets\Script\SwapBg.cs" />
     <Compile Include="Assets\Script\TestSc.cs" />
+    <Compile Include="Assets\SendSc.cs" />
     <Compile Include="Assets\testSplit.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Login/Login.unity
-=======
 - path: Assets/Scenes/mockupmaincharacter.unity
->>>>>>> 142e39fbeddafdc36862824a8007d04cba8b4981
   isLoaded: 1
   isActive: 1

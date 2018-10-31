@@ -17,6 +17,6 @@ public class LoadScene : MonoBehaviour {
 
     public void btn()
     {
-        SceneManager.LoadScene("ChooseGender");
+        SceneManager.LoadScene("Login");
     }
 }
