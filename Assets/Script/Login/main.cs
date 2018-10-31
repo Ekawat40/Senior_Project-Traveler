@@ -5,6 +5,10 @@ using Firebase.Auth;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using Firebase;
+using Firebase.Database;
+using Firebase.Unity.Editor;
+
 
 public class main : MonoBehaviour
 {
@@ -55,15 +59,18 @@ public class main : MonoBehaviour
     public void Start()
 
     {
-
         Load();
         auth = FirebaseAuth.DefaultInstance;
-
         SignupButton.onClick.AddListener(() => Signup(email_input.text, password_input.text));
         SigninButton.onClick.AddListener(() => LoginAction(email_input.text, password_input.text));
+
     }
+
+
     public void Signup(string email, string password) //สมัครสมาชิก
     {
+      
+  
         if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
         {
             //Error handling
@@ -90,6 +97,9 @@ public class main : MonoBehaviour
                 newUser.DisplayName, newUser.UserId);
             UpdateErrorMessage("Signup Success");
         });
+
+        
+
     }
 
     private void UpdateErrorMessage(string message)
@@ -124,6 +134,7 @@ public class main : MonoBehaviour
                 user.DisplayName, user.UserId);
 
             PlayerPrefs.SetString("LoginUser", user != null ? user.Email : "Unknown");
+            //SceneManager.LoadScene("LogoStart");
             StartCoroutine(LoadNewScene());
         });
 
@@ -140,7 +151,7 @@ public class main : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
-        AsyncOperation async = SceneManager.LoadSceneAsync("main");
+        AsyncOperation async = SceneManager.LoadSceneAsync("LogoStart");
         while (!async.isDone)
         {
             yield return null;

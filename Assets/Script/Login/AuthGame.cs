@@ -20,7 +20,7 @@ public class AuthGame : MonoBehaviour
         SignupButton.onClick.AddListener(() => Signup(email_input.text, password_input.text));
         SigninButton.onClick.AddListener(() => LoginAction(email_input.text, password_input.text));
     }
-    public void Signup(string email, string password) //สมัครสมาชิก
+    public void Signup(string email, string password)
     {
         if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
         {
@@ -30,31 +30,16 @@ public class AuthGame : MonoBehaviour
 
         auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
         {
-            if (task.IsCanceled)
-            {
-                Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
-                return;
-            }
-            if (task.IsFaulted)
-            {
-                Debug.LogError("CreateUserWithEmailAndPasswordAsync error: " + task.Exception);
-                if (task.Exception.InnerExceptions.Count > 0)
-                    UpdateErrorMessage(task.Exception.InnerExceptions[0].Message);
-                return;
-            }
+
 
             FirebaseUser newUser = task.Result; // Firebase user has been created.
             Debug.LogFormat("Firebase user created successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
-            UpdateErrorMessage("Signup Success");
+
         });
     }
 
-    private void UpdateErrorMessage(string message)
-    {
-        ErrorText.text = message;
-        Invoke("ClearErrorMessage", 3);
-    }
+
 
     void ClearErrorMessage()
     {
@@ -64,39 +49,26 @@ public class AuthGame : MonoBehaviour
     {
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
         {
-            if (task.IsCanceled)
-            {
-                Debug.LogError("SignInWithEmailAndPasswordAsync canceled.");
-                return;
-            }
-            if (task.IsFaulted)
-            {
-                Debug.LogError("SignInWithEmailAndPasswordAsync error: " + task.Exception);
-                if (task.Exception.InnerExceptions.Count > 0)
-                    UpdateErrorMessage(task.Exception.InnerExceptions[0].Message);
-                return;
-            }
+           
 
             FirebaseUser user = task.Result;
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 user.DisplayName, user.UserId);
 
-            PlayerPrefs.SetString("LoginUser", user != null ? user.Email : "Unknown");
+            //PlayerPrefs.SetString("LoginUser", user != null ? user.Email : "Unknown");
             StartCoroutine(LoadNewScene());
+
         });
     }
 
-    public void LogOutAction(string email, string password)
-    {
 
-    }
 
     IEnumerator LoadNewScene()
     {
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
 
-        AsyncOperation async = SceneManager.LoadSceneAsync("main");
+        AsyncOperation async = SceneManager.LoadSceneAsync("LogoStart");
         while (!async.isDone)
         {
             yield return null;
