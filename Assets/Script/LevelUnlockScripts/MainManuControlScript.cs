@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainManuControlScript : MonoBehaviour {
 
 	public Button level02Button, level03Button;
-	int levelPassed = 0;
+
 
     int money = 0;
 
@@ -15,7 +15,8 @@ public class MainManuControlScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		levelPassed = PlayerPrefs.GetInt ("LevelPassed");
+        int levelPassed;
+        levelPassed = PlayerPrefs.GetInt ("LevelPassed");
 		level02Button.interactable = false;
 		level03Button.interactable = false;
 
@@ -59,17 +60,17 @@ public class MainManuControlScript : MonoBehaviour {
         }
     }
 
-    public void levelToLoad (int level)
+    /*public void levelToLoad (int level)
 	{
 		SceneManager.LoadScene (level);
-	}
+	}*/
 
-	public void resetPlayerPrefs() // reset-level   
+	/*public void resetPlayerPrefs() // reset-level   
     {
 		level02Button.interactable = false; // ถ้าเป็น flase = ยังไม่ปลดล็อคlevel 
 		level03Button.interactable = false; // ถ้าเป็น flase = ยังไม่ปลดล็อคlevel 
         PlayerPrefs.DeleteAll ();
-	}
+	}*/
 
 
     public void addMoney()
