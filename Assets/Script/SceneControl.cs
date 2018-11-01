@@ -27,7 +27,7 @@ public class SceneControl : MonoBehaviour {
     }
     public void ChangeSceneGirl()
     {
-        SceneManager.LoadScene("CreateGirlCharacter");
+        SceneManager.LoadScene("CreateCharacter");
     }
     public void ChangeSceneBoy()
     {

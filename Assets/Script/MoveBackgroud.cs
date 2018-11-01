@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class backgroud : MonoBehaviour {
+public class MoveBackground : MonoBehaviour {
 
     public float bgSpeed;
     float bgPositionX;
@@ -20,7 +20,8 @@ public class backgroud : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.position = new Vector3(transform.position.x + bgSpeed, transform.position.y, transform.position.z);
-        if ( transform.position.x < (bg1PositionX * -1f))        {
+        if ( transform.position.x < (bg1PositionX * -1f))
+        {
             transform.position = new Vector3(bg1PositionX, transform.position.y, transform.position.z);
         }
 
