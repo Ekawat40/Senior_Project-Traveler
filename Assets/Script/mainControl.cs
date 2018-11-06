@@ -7,7 +7,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class mainControl : MonoBehaviour {
+public class mainControl : RootControl
+{
     public Color[] colors;
     public Sprite[] boycOptions;
     public Sprite[] girlcOptions;
@@ -28,12 +29,14 @@ public class mainControl : MonoBehaviour {
     DatabaseReference reference;
     void Start()
     {
+        setName();
         //FirebaseApp.DefaultInstance.SetEditorAuthUserId(uId); 
         //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveller-c316a.firebaseio.com/");
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveler-4e98c.firebaseio.com/");
        
         FirebaseDatabase.DefaultInstance
-    .GetReference("User/-LQ7HR3MZlLsh_dWueW1/Skincolor") //แทน key ด้วย uId 
+    //.GetReference("User/-LQ7HR3MZlLsh_dWueW1/Skincolor") //แทน key ด้วย uId 
+    .GetReference("User/"+RootName+"/Skincolor")
     //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {
@@ -52,7 +55,7 @@ public class mainControl : MonoBehaviour {
         }
     });
         FirebaseDatabase.DefaultInstance
-    .GetReference("User/-LQ2N9Cx2H4wjazO5-Yz/HairId") //แทน key ด้วย uId 
+    .GetReference("User/" + RootName + "/HairId") //แทน key ด้วย uId 
                                                          //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {
@@ -72,7 +75,7 @@ public class mainControl : MonoBehaviour {
     });
 
         FirebaseDatabase.DefaultInstance
-    .GetReference("User/-LQ2N9Cx2H4wjazO5-Yz/Gender") //แทน key ด้วย uId 
+    .GetReference("User/" + RootName + "/Gender") //แทน key ด้วย uId 
                                                       //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {
@@ -92,7 +95,7 @@ public class mainControl : MonoBehaviour {
     });
 
         FirebaseDatabase.DefaultInstance
-    .GetReference("User/-LQ2N9Cx2H4wjazO5-Yz/ClothId") //แทน key ด้วย uId 
+    .GetReference("User/" + RootName + "/ClothId") //แทน key ด้วย uId 
                                                       //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {

@@ -27,13 +27,15 @@
 
         private void Start()
         {
+            pedometer = new Pedometer(OnStep);
+            // Reset UI
+            OnStep(0, 0);
             FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveler-4e98c.firebaseio.com/");
             // สำหรับใช้ในการอ้างอิง Firebase
             reference = FirebaseDatabase.DefaultInstance.RootReference;
             // Create a new pedometer
-            pedometer = new Pedometer(OnStep);
-            // Reset UI
-            OnStep(0, 0);
+
+
 
 
         }
@@ -259,6 +261,9 @@
 
 
         }
+
+
+
 
 
 
