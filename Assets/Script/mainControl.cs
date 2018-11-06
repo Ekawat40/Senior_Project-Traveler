@@ -92,7 +92,6 @@ public class mainControl : MonoBehaviour {
     });
 
         FirebaseDatabase.DefaultInstance
-    .GetReference("User/-LQ2N9Cx2H4wjazO5-Yz/ClothId") //แทน key ด้วย uId 
                                                       //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {
