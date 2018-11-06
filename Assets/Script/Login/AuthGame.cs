@@ -58,7 +58,8 @@ public class AuthGame : MonoBehaviour
             FirebaseUser user = task.Result;
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 user.DisplayName, user.UserId);
-
+           // SessionRoot sessionRoot = new SessionRoot();
+           // sessionRoot.SessionLoad();
             //PlayerPrefs.SetString("LoginUser", user != null ? user.Email : "Unknown");
             StartCoroutine(LoadNewScene());
 

@@ -39,7 +39,7 @@ namespace PedometerU {
         /// </summary>
         public Pedometer (StepCallback callback) {
             if (Implementation == null) {
-                Debug.Log("Pedometer Error: Step counting is not supported on this platform");
+                Debug.LogError("Pedometer Error: Step counting is not supported on this platform");
                 return;
             }
             if (callback == null) {
@@ -55,7 +55,7 @@ namespace PedometerU {
         /// </summary>
         public void Dispose () {
             if (Implementation == null) {
-                Debug.Log("Pedometer Error: Step counting is not supported on this platform");
+                Debug.LogWarning("Pedometer Error: Step counting is not supported on this platform");
                 return;
             }
             Implementation.OnStep -= OnStep;
