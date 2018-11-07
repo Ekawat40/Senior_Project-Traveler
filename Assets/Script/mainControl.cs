@@ -96,6 +96,7 @@ public class mainControl : RootControl
 
         FirebaseDatabase.DefaultInstance
     .GetReference("User/" + RootName + "/ClothId") //แทน key ด้วย uId 
+
                                                       //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {

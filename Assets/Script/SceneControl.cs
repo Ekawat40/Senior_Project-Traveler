@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneControl : MonoBehaviour {
 
     public GameObject Panel;
+    public GameObject BtnCity;
 
     // Use this for initialization
     void Start()
@@ -40,5 +41,10 @@ public class SceneControl : MonoBehaviour {
     public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene);
+    }
+
+    public void DecreaseMoney()
+    {
+        Destroy(BtnCity);
     }
 }
