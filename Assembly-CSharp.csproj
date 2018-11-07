@@ -60,8 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EmailSend.cs" />
-    <Compile Include="Assets\LoadScene.cs" />
     <Compile Include="Assets\Pedometer\Example\StepCounter.cs" />
     <Compile Include="Assets\Pedometer\Plugins\Managed\IPedometer.cs" />
     <Compile Include="Assets\Pedometer\Plugins\Managed\Pedometer.cs" />
@@ -76,11 +74,14 @@
     <Compile Include="Assets\Script\ChangeBackground.cs" />
     <Compile Include="Assets\Script\ChangeBg.cs" />
     <Compile Include="Assets\Script\DragHandeler.cs" />
+    <Compile Include="Assets\Script\EmailSend.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\CountryMap.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
+    <Compile Include="Assets\Script\LoadScene.cs" />
     <Compile Include="Assets\Script\LoadSceneControl.cs" />
     <Compile Include="Assets\Script\Login\AuthGame.cs" />
     <Compile Include="Assets\Script\Login\main.cs" />
+    <Compile Include="Assets\Script\Login\RootControl.cs" />
     <Compile Include="Assets\Script\mainControl.cs" />
     <Compile Include="Assets\Script\MoveBackgroud.cs" />
     <Compile Include="Assets\Script\MoveBg.cs" />
@@ -88,11 +89,14 @@
     <Compile Include="Assets\Script\saveLocation.cs" />
     <Compile Include="Assets\Script\SceneControl.cs" />
     <Compile Include="Assets\Script\SceneController.cs" />
+    <Compile Include="Assets\Script\SendSc.cs" />
+    <Compile Include="Assets\Script\SessionLoadScene.cs" />
+    <Compile Include="Assets\Script\SessionRoot.cs" />
     <Compile Include="Assets\Script\Slot.cs" />
     <Compile Include="Assets\Script\SwapBg.cs" />
     <Compile Include="Assets\Script\TestSc.cs" />
-    <Compile Include="Assets\SendSc.cs" />
-    <Compile Include="Assets\testSplit.cs" />
+    <Compile Include="Assets\Script\testSplit.cs" />
+    <Compile Include="Assets\SSTools\Scripts\SSTools.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
