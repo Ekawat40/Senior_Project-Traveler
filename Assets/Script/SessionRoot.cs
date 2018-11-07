@@ -9,7 +9,6 @@ public class SessionRoot : MonoBehaviour {
     Scene sceneM;
     public InputField email_input;
     public String RootName;
-    String rootLastName;
     String saveEmail;
     public Button SigninButton;
     // Use this for initialization
@@ -21,8 +20,7 @@ public class SessionRoot : MonoBehaviour {
 
         }else if (sceneM.name == "LogoStart")
         {
-
-            //getRoot();
+           // getRoot();
            // SSTools.ShowMessage("Click LogoStart", SSTools.Position.bottom, SSTools.Time.twoSecond);
            //SeesionBtn.onClick.AddListener(() => SessionLoad());
 
@@ -52,16 +50,8 @@ public class SessionRoot : MonoBehaviour {
         //PlayerPrefs.SetString("RootKey", RootName);
 
         splitWord();
-        if (rootLastName == RootName)
-        {
-            
-            SSTools.ShowMessage("EmailError", SSTools.Position.bottom, SSTools.Time.twoSecond);
-            Debug.Log("EmailError");
-        }
-        else
-        {
-            PlayerPrefs.SetString("RootKey", RootName);
-        }
+
+        PlayerPrefs.SetString("RootKey", RootName);
 
     }
 
@@ -87,15 +77,15 @@ public class SessionRoot : MonoBehaviour {
 
         string text1 = email_input.text;
         //string text1 = "aekwatt@gmail.com";
-        System.Console.WriteLine("Original text: '{0}'", text1);
+        //System.Console.WriteLine("Original text: '{0}'", text1);
 
         string[] words = text1.Split(separatingChars, System.StringSplitOptions.RemoveEmptyEntries);
-        System.Console.WriteLine("{0} substrings in text:", words.Length);
+        //System.Console.WriteLine("{0} substrings in text:", words.Length);
 
         Debug.Log(words[0]);
 
         RootName = words[0];
-        rootLastName = words[1];
+
         //tvRoot.text = RootName;
 
 
@@ -109,13 +99,13 @@ public class SessionRoot : MonoBehaviour {
 
     public void getRoot()
     {
-       /* //healthValue = PlayerPrefs.GetInt("HealthKey", 0);
+       //healthValue = PlayerPrefs.GetInt("HealthKey", 0);
         //PlayerPrefs.SetInt("HealthKey", 0);
         if (PlayerPrefs.HasKey("HealthKEy"))
         {
             //do something
         }
-        RootName = PlayerPrefs.GetString("RootKey", "");*/
+        RootName = PlayerPrefs.GetString("RootKey", "");
 
 
     }
@@ -143,16 +133,18 @@ public class SessionRoot : MonoBehaviour {
              SceneManager.LoadScene("Login");
          }*/
 
-        if(rootLastName == RootName)
+        /*if(rootLastName == RootName)
         {
             Debug.Log("Error Email");
-        }
+        }*/
+
+
 
         if (RootName == "null")
         {
             SceneManager.LoadScene("Login");
         }
-        else
+        else if (RootName != "null")
         {
             SceneManager.LoadScene("mockupmaincharacter");
         }

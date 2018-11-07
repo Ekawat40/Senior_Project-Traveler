@@ -49,7 +49,7 @@ public class mainControl : RootControl
         {
             DataSnapshot snapshot = task.Result;
             j = snapshot.GetRawJsonValue();
-            Debug.Log(j);
+            //Debug.Log(j);
             skinId = int.Parse(j);
             // Do something with snapshot...
         }
@@ -68,7 +68,7 @@ public class mainControl : RootControl
         {
             DataSnapshot snapshot = task.Result;
             j = snapshot.GetRawJsonValue();
-            Debug.Log(j);
+            //Debug.Log(j);
             hairId = int.Parse(j);
             // Do something with snapshot...
         }
@@ -88,7 +88,7 @@ public class mainControl : RootControl
         {
             DataSnapshot snapshot = task.Result;
             j = snapshot.GetRawJsonValue();
-            Debug.Log(j);
+            //Debug.Log(j);
             gender = int.Parse(j);
             // Do something with snapshot...
         }
