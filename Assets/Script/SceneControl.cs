@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneControl : MonoBehaviour {
 
     public GameObject Panel;
-    public GameObject BtnCity;
+    public GameObject BtnLock;
 
     // Use this for initialization
     void Start()
@@ -45,6 +45,6 @@ public class SceneControl : MonoBehaviour {
 
     public void DecreaseMoney()
     {
-        Destroy(BtnCity);
+        Destroy(BtnLock);
     }
 }
