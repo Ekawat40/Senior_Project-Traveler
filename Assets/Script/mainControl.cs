@@ -33,10 +33,10 @@ public class mainControl : RootControl
         //FirebaseApp.DefaultInstance.SetEditorAuthUserId(uId); 
         //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveller-c316a.firebaseio.com/");
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveler-4e98c.firebaseio.com/");
-       
+
         FirebaseDatabase.DefaultInstance
     //.GetReference("User/-LQ7HR3MZlLsh_dWueW1/Skincolor") //แทน key ด้วย uId 
-    .GetReference("User/"+RootName+"/Skincolor")
+    .GetReference("User/" + RootName + "/Skincolor")
     //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {
@@ -56,7 +56,7 @@ public class mainControl : RootControl
     });
         FirebaseDatabase.DefaultInstance
     .GetReference("User/" + RootName + "/HairId") //แทน key ด้วย uId 
-                                                         //.GetReference("User/"+uId)
+                                                  //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {
         if (task.IsFaulted)
@@ -76,7 +76,7 @@ public class mainControl : RootControl
 
         FirebaseDatabase.DefaultInstance
     .GetReference("User/" + RootName + "/Gender") //แทน key ด้วย uId 
-                                                      //.GetReference("User/"+uId)
+                                                  //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {
         if (task.IsFaulted)
@@ -97,7 +97,7 @@ public class mainControl : RootControl
         FirebaseDatabase.DefaultInstance
     .GetReference("User/" + RootName + "/ClothId") //แทน key ด้วย uId 
 
-                                                      //.GetReference("User/"+uId)
+    //.GetReference("User/"+uId)
     .GetValueAsync().ContinueWith(task =>
     {
         if (task.IsFaulted)
@@ -121,9 +121,10 @@ public class mainControl : RootControl
         //Debug.Log(uId);
     }
 
-	// Update is called once per frame
-	void Update () {
-        for (int i = 0; i < bOptions.Length; i++) 
+    // Update is called once per frame
+    void Update()
+    {
+        for (int i = 0; i < bOptions.Length; i++)
         {
             if (i == gender)
             {
@@ -138,7 +139,7 @@ public class mainControl : RootControl
             }
         }
 
-        if(gender == 0)
+        if (gender == 0)
         {
             for (int i = 0; i < girlcOptions.Length; i++)
             {
@@ -172,7 +173,6 @@ public class mainControl : RootControl
                 }
             }
         }
-       
+
     }
 }
-
