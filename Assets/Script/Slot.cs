@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Slot : MonoBehaviour, IDropHandler
 {
@@ -23,5 +24,10 @@ public class Slot : MonoBehaviour, IDropHandler
         {
             DragHandeler.itemBeginDrag.transform.SetParent(transform);
         }
+    }
+
+    public void btnCreate()
+    {
+        SceneManager.LoadScene("MapCountry");
     }
 }

@@ -4,18 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using PedometerU.Tests;
+using Firebase;
+using Firebase.Database;
+using Firebase.Unity.Editor;
 
 public class CountryMap : SwapBg
 {
 
-   // public Button level02Button, level03Button;
+    private DatabaseReference reference;
+    string i;
+    int num;
+    // public Button level02Button, level03Button;
 
     [SerializeField]
     GameObject btnDes1, btnDes2, btnDes3, btnDes4, btnDes5, btnDes6, btnDes7, btnDes8, btnDes9, btnDes10;
 
+    int tempValue = 0;
     // Use this for initialization
     void Start()
     {
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveler-4e98c.firebaseio.com/");
+        // สำหรับใช้ในการอ้างอิง Firebase
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
+
+        setName();
         /*int levelPassed;
         levelPassed = PlayerPrefs.GetInt("LevelPassed");
         level02Button.interactable = false;
@@ -42,17 +54,47 @@ public class CountryMap : SwapBg
                 break;
         }*/
         setState();
+        //Load();
         Debug.Log(temp);
-        if (temp == 1)
+
+        ////////////////////////////////
+
+
+        /*if (tempValue == 1)
         {
             Destroy(btnDes1);
         }
 
-        if (temp == 2)
+        if (tempValue == 2)
         {
             Destroy(btnDes1);
             Destroy(btnDes2);
+        }*/
+
+         FirebaseDatabase.DefaultInstance
+        .GetReference("User/" + RootName + "/Country")
+        .GetValueAsync().ContinueWith(task =>
+        {
+        if (task.IsFaulted)
+        {
+            Debug.Log("error");
         }
+        else if (task.IsCompleted)
+        {
+            DataSnapshot snapshot = task.Result;
+                i = snapshot.GetRawJsonValue();
+                num = int.Parse(i);
+                    }
+        });
+
+
+
+    }
+
+    public void Load()
+    {
+        tempValue = PlayerPrefs.GetInt("tempKey", 0);
+        //PlayerPrefs.SetInt("HealthKey", 0);
     }
 
 
@@ -71,9 +113,33 @@ public class CountryMap : SwapBg
                 break;
         }*/
 
-       // SwapBg swapBg = new SwapBg();
+        // SwapBg swapBg = new SwapBg();
 
-        
+        /*if (temp == 1)
+        {
+            tempValue = temp;
+            //PlayerPrefs.SetInt("tempKey", tempValue);
+            Destroy(btnDes1);
+        }
+
+        if (temp == 2)
+        {
+            tempValue = temp;
+            //PlayerPrefs.SetInt("tempKey", tempValue);
+            Destroy(btnDes1);
+            Destroy(btnDes2);
+        }*/
+
+        if (num == 1)
+        {
+            Destroy(btnDes1);
+        }
+
+        if (num == 2)
+        {
+            Destroy(btnDes1);
+            Destroy(btnDes2);
+        }
 
 
     }

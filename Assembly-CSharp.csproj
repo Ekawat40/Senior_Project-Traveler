@@ -96,8 +96,10 @@
     <Compile Include="Assets\Script\SwapBg.cs" />
     <Compile Include="Assets\Script\TestSc.cs" />
     <Compile Include="Assets\Script\testSplit.cs" />
+    <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
     <Compile Include="Assets\SSTools\Scripts\SSTools.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+    <None Include="Assets\Simple UI\Fonts\OFL.txt" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\Plugins\link.xml" />

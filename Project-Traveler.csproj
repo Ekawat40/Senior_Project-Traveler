@@ -686,6 +686,7 @@
     <Compile Include="Assets\Script\EmailSend.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\CountryMap.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
+    <Compile Include="Assets\Script\loadingScene.cs" />
     <Compile Include="Assets\Script\LoadScene.cs" />
     <Compile Include="Assets\Script\LoadSceneControl.cs" />
     <Compile Include="Assets\Script\Login\AuthGame.cs" />
@@ -705,6 +706,7 @@
     <Compile Include="Assets\Script\SwapBg.cs" />
     <Compile Include="Assets\Script\TestSc.cs" />
     <Compile Include="Assets\Script\testSplit.cs" />
+    <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
     <Compile Include="Assets\SSTools\Scripts\SSTools.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -740,6 +742,7 @@
     <None Include="Assets\Plugins\Android\com.google.firebase.firebase-database-unity-5.4.0\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\com.google.firebase.firebase-database-unity-5.4.0\R.txt" />
     <None Include="Assets\Plugins\Android\com.google.firebase.firebase-database-unity-5.4.0\proguard.txt" />
+    <None Include="Assets\Simple UI\Fonts\OFL.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />

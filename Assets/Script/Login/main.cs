@@ -25,6 +25,8 @@ public class main : MonoBehaviour
 
     String saveEmail;
 
+    //
+
     public void Save()
     {
         saveEmail = email_input.text;

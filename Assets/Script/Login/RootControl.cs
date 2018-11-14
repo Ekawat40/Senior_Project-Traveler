@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class RootControl : MonoBehaviour {
 
     public Button SigninButton,SeesionBtn;
@@ -15,9 +16,10 @@ public class RootControl : MonoBehaviour {
     public Text showEmail;
     String saveEmail;
 
+ 
     // Use this for initialization
     void Start () {
-
+     
         if (sceneM.name == "Login")
         {
             SigninButton.onClick.AddListener(() => LoginAction());

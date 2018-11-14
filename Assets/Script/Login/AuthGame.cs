@@ -73,7 +73,7 @@ public class AuthGame : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        AsyncOperation async = SceneManager.LoadSceneAsync("ChooseGender");
+        AsyncOperation async = SceneManager.LoadSceneAsync("loadingScene");
         while (!async.isDone)
         {
             yield return null;

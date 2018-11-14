@@ -53,6 +53,8 @@ public class ChangeAppearances : MonoBehaviour {
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveler-4e98c.firebaseio.com/");
         // สำหรับใช้ในการอ้างอิง Firebase
         reference = FirebaseDatabase.DefaultInstance.RootReference;
+
+        reference.Child("User/" + RootName).Child("State").SetValueAsync(0);
     }
 
     public void LoginAction()
@@ -94,6 +96,10 @@ public class ChangeAppearances : MonoBehaviour {
         reference.Child("User/" + RootName).Child("Gender").SetValueAsync(gender);
         reference.Child("User/" + RootName).Child("ClothId").SetValueAsync(clothId);
         reference.Child("User/" + RootName).Child("HairId").SetValueAsync(hairId);
+        reference.Child("User/" + RootName).Child("StepCount").SetValueAsync(0);
+        reference.Child("User/" + RootName).Child("Money").SetValueAsync(0);
+        reference.Child("User/" + RootName).Child("State").SetValueAsync(1);
+
 
         SceneManager.LoadScene("mockupmaincharacter");
     }
