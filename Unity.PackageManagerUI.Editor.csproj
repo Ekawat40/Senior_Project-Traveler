@@ -779,6 +779,10 @@
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
+    <None Include="Assets\PSD Logo Templates\Fonts\Baloo\OFL.txt" />
+    <None Include="Assets\PSD Logo Templates\Fonts\Changa_One\OFL.txt" />
+    <None Include="Assets\PSD Logo Templates\Fonts\Lilita_One\OFL.txt" />
+    <None Include="Assets\PSD Logo Templates\Fonts\Passion_One\OFL.txt" />
     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.92.0.txt" />
     <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />

@@ -172,7 +172,24 @@ public class mainControl : RootControl
                 }
             }
         }
+
+
        
+    }
+
+        public void ChangeCloth(int cId)
+    {
+        clothId = cId;
+    }
+    public void ChangeHair(int hId)
+    {
+        hairId = hId;
+    }
+ 
+    public void UpdateValue()
+    {
+        
+
     }
 }
 

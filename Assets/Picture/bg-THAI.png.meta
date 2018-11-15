@@ -3,6 +3,7 @@ guid: 934b3be4abf209049af77948d0de6669
 TextureImporter:
   fileIDToRecycleName:
     21300000: bg-THAI_0
+    21300002: bg-THAI_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -115,13 +116,33 @@ TextureImporter:
         width: 4084
         height: 1436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: f19cc54df78dfba41975791f2724c319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg-THAI_1
+      rect:
+        serializedVersion: 2
+        x: 4782
+        y: 156
+        width: 1031
+        height: 1193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 220, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77cac52888537ea4a94962aee1e5d2ce
       vertices: []
       indices: 
       edges: []
