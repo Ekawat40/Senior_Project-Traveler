@@ -21,6 +21,7 @@
         private int num,num2, numBg, numMoney,numC=0;
         public int state ;
         int Round = 0;
+        Scene sceneM;
 
         //
         private DatabaseReference reference;
@@ -344,6 +345,19 @@
         public void btnmain()
         {
             SceneManager.LoadScene("Main_1");
+        }
+
+        public void btnDressUp()
+        {
+            if (gender == 0)
+            {
+                SceneManager.LoadScene("DressupGirl");
+            }
+            else if (gender == 1)
+            {
+                SceneManager.LoadScene("DressupBoy");
+            }
+
         }
 
         public void setState()
